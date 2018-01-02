@@ -1,5 +1,19 @@
-#include <avr/io.h>
-#include <util/delay.h>
+//#include <avr/io.h>
+//#include <util/delay.h>
+#include <Arduino.h>
+
+
+
+
+/*template<class C> 
+void write_bits_LSB_first(C data, int bits_to_write)
+{
+	
+
+}
+*/
+
+
 int main()
 {
     // DDRB  Data Direction Register for port B

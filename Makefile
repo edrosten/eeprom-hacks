@@ -26,7 +26,12 @@ FLAGS=-Os -mmcu=$(MCU) -DF_CPU=$(F_CPU)
 #compiler rules.
 CXXFLAGS=$(FLAGS)
 CFLAGS=$(FLAGS)
- 
+
+ARDUINO=/usr/share/arduino/
+
+CPPFLAGS+=-I$(ARDUINO)/hardware/arduino/cores/arduino
+CPPFLAGS+=-I$(ARDUINO)/hardware/arduino/variants/standard
+
  
 OBJECTS=prog.o
  
