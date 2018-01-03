@@ -78,15 +78,15 @@ void loop() {
      
     for(int i=0; i < 128; i++)
     {
+      char buf[16];
       if(i % 16 == 0)
       {
-        Serial.print("\n0x");
-        Serial.print(i, HEX);   
-        Serial.print(":");
+        sprintf(buf, "\n0x%02x:", i);
+        Serial.print(buf);
       }
-     
-      Serial.write(" 0x");
-      Serial.print(data[i], HEX);
+      
+      sprintf(buf, " %02x", data[i]);
+      Serial.print(buf);
     }
   }
   else
